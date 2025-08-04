@@ -1,0 +1,5 @@
+remote_theme: pages-themes/Game Portfolio@v0.2.0
+plugins:
+- jekyll-remote-theme # add this line to the plugins list if you already have one
+title: [Kamal Saini]
+description: [Turning Data into insights]
