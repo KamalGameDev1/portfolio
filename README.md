@@ -63,7 +63,7 @@ K.K. Higher Secondary School, Meerut (U.P. Board) — 2012
 - Team Collaboration
 - Project Ownership
 - Problem-Solving
-- Agile Workflow
+
 
 ---
 
