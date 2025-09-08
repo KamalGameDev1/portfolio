@@ -5,195 +5,116 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Kamal Saini - Game Developer</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0; padding: 0;
-      background: #f4f4f9;
-      color: #333;
-    }
-    header {
-      background: #222;
+    body { font-family: Arial, sans-serif; margin: 0; background: #f9fafc; color: #333; }
+
+    /* Hero Section */
+    .hero {
+      position: relative;
+      background: 
+        linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+        url("https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=1350&q=80") 
+        no-repeat center center/cover;
       color: #fff;
       text-align: center;
-      padding: 2rem 1rem;
+      padding: 4rem 1rem;
     }
-    header h1 {
-      margin: 0;
-      font-size: 2.5rem;
+    .hero-content { max-width: 700px; margin: auto; }
+    .profile-pic {
+      width: 160px; height: 160px; border-radius: 50%;
+      border: 4px solid #fff; margin-bottom: 1rem;
+      object-fit: cover; box-shadow: 0 4px 10px rgba(0,0,0,0.3);
     }
-    header p {
-      font-size: 1.2rem;
-      margin: 0.5rem 0 0;
-    }
-    section {
-      max-width: 1000px;
-      margin: auto;
-      padding: 2rem 1rem;
-    }
-    h2 {
-      border-bottom: 2px solid #222;
-      padding-bottom: 0.5rem;
-      margin-bottom: 1rem;
-      color: #222;
-    }
+    .hero h1 { margin: 0; font-size: 2.8rem; }
+    .hero p { font-size: 1.3rem; margin-top: 0.5rem; color: #e0e0e0; }
+
+    /* Sections */
+    section { max-width: 1000px; margin: auto; padding: 2rem; }
+    h2 { border-bottom: 2px solid #222; padding-bottom: 0.5rem; margin-bottom: 1rem; }
+
+    /* Project Cards */
     .project {
-      background: #fff;
-      padding: 1rem;
-      margin: 1.5rem 0;
-      border-radius: 8px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      background: #fff; border-radius: 12px; padding: 1rem; margin: 1.5rem 0;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     }
-    .project img {
-      width: 100%;
-      max-height: 250px;
-      object-fit: cover;
-      border-radius: 8px;
-      margin-bottom: 0.8rem;
+    .project img { width: 100%; max-height: 220px; object-fit: cover; border-radius: 8px; }
+    .buttons { margin-top: 0.8rem; display: flex; gap: 10px; }
+    .btn {
+      text-decoration: none; padding: 8px 14px; border-radius: 6px;
+      font-size: 0.9rem; font-weight: bold; transition: 0.2s;
     }
-    .project-links a {
-      display: inline-block;
-      margin-right: 15px;
-      color: #0066cc;
-      font-weight: bold;
-      text-decoration: none;
-    }
-    .project-links a:hover {
-      text-decoration: underline;
-    }
-    .skills, .contact {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-    }
-    .skill {
-      background: #222;
-      color: #fff;
-      padding: 5px 10px;
-      border-radius: 5px;
-      font-size: 0.9rem;
-    }
-    footer {
-      text-align: center;
-      background: #222;
-      color: #fff;
-      padding: 1rem;
-      margin-top: 2rem;
-    }
+    .btn-watch { background: #0077ff; color: white; }
+    .btn-watch:hover { background: #005dcc; }
+    .btn-play { background: #28a745; color: white; }
+    .btn-play:hover { background: #1e7e34; }
+
+    footer { text-align: center; background: #222; color: #fff; padding: 1rem; margin-top: 2rem; }
   </style>
 </head>
 <body>
 
-  <header>
-    <h1>Kamal Saini</h1>
-    <p>Unity Game Developer | C++ Programmer</p>
+  <!-- Hero -->
+  <header class="hero">
+    <div class="hero-content">
+      <img src="https://i.pravatar.cc/200" alt="Kamal Saini" class="profile-pic">
+      <h1>Kamal Saini</h1>
+      <p>Unity Game Developer | C++ Programmer</p>
+    </div>
   </header>
 
-  <section>
-    <h2>About Me</h2>
-    <p>Unity Game Developer with 2+ years of experience in creating 2D, 3D, and hyper-casual games. Skilled in C#, Unity, C++, OOP, Game UI, API integration, and Clean Architecture. Passionate about making fun and optimized gameplay experiences.</p>
-  </section>
-
+  <!-- Projects -->
   <section>
     <h2>Projects</h2>
-    
+
     <div class="project">
-      <img src="images/ludo.jpg" alt="Ludo Game Screenshot">
+      <img src="https://picsum.photos/800/400?random=1" alt="Ludo">
       <h3>🎲 Ludo Game</h3>
       <p>Multiplayer board game with dice mechanics & turn-based system.</p>
-      <p><b>Skills:</b> Unity UI, API integration, Player movement logic</p>
-      <div class="project-links">
-        <a href="https://your-itchio-link.com/ludo" target="_blank">🎮 Play on Itch.io</a>
-        <a href="https://your-clip-url.com/ludo" target="_blank">▶ Watch Gameplay</a>
+      <div class="buttons">
+        <a href="ludo.html" class="btn btn-watch">🎥 Watch Clip</a>
+        <a href="https://itch.io/" target="_blank" class="btn btn-play">▶ Play on Itch.io</a>
       </div>
     </div>
 
     <div class="project">
-      <img src="images/2d-platformer.jpg" alt="2D Platformer Screenshot">
-      <h3>🟩 2D Platformer</h3>
-      <p>Side-scrolling adventure with enemies & collectibles.</p>
-      <p><b>Skills:</b> Physics, Animations, Object Pooling</p>
-      <div class="project-links">
-        <a href="https://your-itchio-link.com/platformer" target="_blank">🎮 Play on Itch.io</a>
-        <a href="https://your-clip-url.com/platformer" target="_blank">▶ Watch Gameplay</a>
+      <img src="https://picsum.photos/800/400?random=2" alt="Runner">
+      <h3>🏃 Hyper Casual Runner</h3>
+      <p>Endless runner with procedural levels & fast-paced gameplay.</p>
+      <div class="buttons">
+        <a href="runner.html" class="btn btn-watch">🎥 Watch Clip</a>
+        <a href="https://itch.io/" target="_blank" class="btn btn-play">▶ Play on Itch.io</a>
       </div>
     </div>
 
     <div class="project">
-      <img src="images/3d-ball.jpg" alt="3D Rolling Ball Screenshot">
+      <img src="https://picsum.photos/800/400?random=3" alt="Snake">
+      <h3>🐍 2D Snake</h3>
+      <p>Classic snake game with food spawning & score system.</p>
+      <div class="buttons">
+        <a href="snake2d.html" class="btn btn-watch">🎥 Watch Clip</a>
+        <a href="https://itch.io/" target="_blank" class="btn btn-play">▶ Play on Itch.io</a>
+      </div>
+    </div>
+
+    <div class="project">
+      <img src="https://picsum.photos/800/400?random=4" alt="Snake 3D">
+      <h3>🐉 3D Snake</h3>
+      <p>Snake in 3D environment with tail growth & obstacles.</p>
+      <div class="buttons">
+        <a href="snake3d.html" class="btn btn-watch">🎥 Watch Clip</a>
+        <a href="https://itch.io/" target="_blank" class="btn btn-play">▶ Play on Itch.io</a>
+      </div>
+    </div>
+
+    <div class="project">
+      <img src="https://picsum.photos/800/400?random=5" alt="Rolling Ball">
       <h3>⚪ 3D Rolling Ball</h3>
       <p>Physics-based ball control game with obstacles & checkpoints.</p>
-      <p><b>Skills:</b> Rigidbody Physics, Level Design</p>
-      <div class="project-links">
-        <a href="https://your-itchio-link.com/rolling-ball" target="_blank">🎮 Play on Itch.io</a>
-        <a href="https://your-clip-url.com/rolling-ball" target="_blank">▶ Watch Gameplay</a>
+      <div class="buttons">
+        <a href="rollingball.html" class="btn btn-watch">🎥 Watch Clip</a>
+        <a href="https://itch.io/" target="_blank" class="btn btn-play">▶ Play on Itch.io</a>
       </div>
     </div>
 
-    <div class="project">
-      <img src="images/turn-based.jpg" alt="Turn-Based Game Screenshot">
-      <h3>♟ Turn-Based Game (C++)</h3>
-      <p>Console-based game built using C++ OOP principles.</p>
-      <p><b>Skills:</b> C++ OOP, Data Structures, Game Loop</p>
-      <div class="project-links">
-        <a href="https://your-clip-url.com/turnbased" target="_blank">▶ Watch Gameplay</a>
-      </div>
-    </div>
-
-    <div class="project">
-      <img src="images/2d-snake.jpg" alt="2D Snake Game Screenshot">
-      <h3>🐍 2D Snake Game</h3>
-      <p>Classic snake game with food spawning & score system.</p>
-      <p><b>Skills:</b> Grid Logic, Collision Handling</p>
-      <div class="project-links">
-        <a href="https://your-itchio-link.com/snake2d" target="_blank">🎮 Play on Itch.io</a>
-        <a href="https://your-clip-url.com/snake2d" target="_blank">▶ Watch Gameplay</a>
-      </div>
-    </div>
-
-    <div class="project">
-      <img src="images/3d-snake.jpg" alt="3D Snake Game Screenshot">
-      <h3>🐉 3D Snake Game</h3>
-      <p>Snake in 3D environment with tail growth & obstacles.</p>
-      <p><b>Skills:</b> Path Following, Camera System</p>
-      <div class="project-links">
-        <a href="https://your-itchio-link.com/snake3d" target="_blank">🎮 Play on Itch.io</a>
-        <a href="https://your-clip-url.com/snake3d" target="_blank">▶ Watch Gameplay</a>
-      </div>
-    </div>
-
-    <div class="project">
-      <img src="images/runner.jpg" alt="Hyper Casual Runner Screenshot">
-      <h3>🏃 Hyper Casual Runner</h3>
-      <p>Endless runner with swipe/keyboard controls & procedural generation.</p>
-      <p><b>Skills:</b> Object Pooling, Procedural Level Design</p>
-      <div class="project-links">
-        <a href="https://your-itchio-link.com/runner" target="_blank">🎮 Play on Itch.io</a>
-        <a href="https://your-clip-url.com/runner" target="_blank">▶ Watch Gameplay</a>
-      </div>
-    </div>
-  </section>
-
-  <section>
-    <h2>Skills</h2>
-    <div class="skills">
-      <div class="skill">Unity 2D/3D</div>
-      <div class="skill">C#</div>
-      <div class="skill">C++</div>
-      <div class="skill">OOP</div>
-      <div class="skill">Clean Architecture</div>
-      <div class="skill">GitHub</div>
-      <div class="skill">API Integration</div>
-    </div>
-  </section>
-
-  <section>
-    <h2>Contact</h2>
-    <div class="contact">
-      <p>📍 Jaipur, India</p>
-      <p>📧 your.email@gmail.com</p>
-      <p>🔗 <a href="https://github.com/yourusername" target="_blank">GitHub</a></p>
-      <p>🔗 <a href="https://linkedin.com/in/yourusername" target="_blank">LinkedIn</a></p>
-    </div>
   </section>
 
   <footer>
