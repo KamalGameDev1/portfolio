@@ -6,18 +6,44 @@
   <title>Kamal Saini - Game Developer</title>
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <style>
-    body { font-family: Arial, sans-serif; margin: 0; background: #f9fafc; color: #333; }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: Arial, sans-serif; background: #f9fafc; color: #333; }
 
-    /* Hero Section */
+    /* Header */
+    header {
+      background: #1c2833;
+      color: #fff;
+      padding: 15px 0;
+      text-align: center;
+      border-bottom: 3px solid #00ff99;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+    }
+    nav ul li a {
+      text-decoration: none;
+      color: #fff;
+      font-size: 18px;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+    nav ul li a:hover { color: #00ff99; }
+
+    /* Hero */
     .hero {
       position: relative;
-      background: 
-        linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
-        url("https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=1350&q=80") 
+      background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+        url("https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=1350&q=80")
         no-repeat center center/cover;
       color: #fff;
       text-align: center;
-      padding: 4rem 1rem;
+      padding: 5rem 1rem;
     }
     .hero-content { max-width: 700px; margin: auto; }
     .profile-pic {
@@ -25,71 +51,124 @@
       border: 4px solid #fff; margin-bottom: 1rem;
       object-fit: cover; box-shadow: 0 4px 10px rgba(0,0,0,0.3);
     }
-    .hero h1 { margin: 0; font-size: 2.8rem; }
+    .hero h1 { margin: 0; font-size: 3rem; }
     .hero p { font-size: 1.3rem; margin-top: 0.5rem; color: #e0e0e0; }
 
-    /* Sections */
-    section { max-width: 1100px; margin: auto; padding: 2rem; }
-    h2 { border-bottom: 2px solid #222; padding-bottom: 0.5rem; margin-bottom: 1rem; }
+    /* Section Titles */
+    section { max-width: 1200px; margin: auto; padding: 2rem; }
+    h2 {
+      border-bottom: 2px solid #222;
+      padding-bottom: 0.5rem;
+      margin-bottom: 1.5rem;
+      text-align: center;
+    }
 
-    /* Project Grid */
+    /* Project Grid (Personal) */
     .projects-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-      gap: 20px;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 25px;
     }
-    @media (max-width: 768px) {
-      .projects-grid {
-        grid-template-columns: 1fr; /* stack on mobile */
-      }
-    }
-
     .project {
-      background: #fff; border-radius: 12px; padding: 1rem;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-      display: flex; flex-direction: column; justify-content: space-between;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      background: #fff;
+      border: 2px solid #00ff99;
+      border-radius: 15px;
+      padding: 1rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      text-align: center;
+      transition: transform 0.3s, box-shadow 0.3s;
     }
     .project:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+      transform: translateY(-8px);
+      box-shadow: 0 6px 18px rgba(0,255,153,0.4);
     }
-    .project img { 
-      width: 100%; height: 180px; object-fit: cover; border-radius: 8px; 
-      transition: transform 0.4s ease;
+    .project img {
+      width: 100%; height: 200px; object-fit: cover;
+      border-radius: 10px; border-bottom: 2px solid #00ff99;
     }
-    .project:hover img {
-      transform: scale(1.05);
+    .project h3 { margin: 0.8rem 0; }
+    .buttons {
+      margin-top: auto; display: flex; justify-content: center; gap: 15px;
     }
-    .project h3 { margin: 0.6rem 0; }
-    .buttons { margin-top: auto; display: flex; gap: 10px; }
     .btn {
-      text-decoration: none; padding: 8px 14px; border-radius: 6px;
-      font-size: 0.9rem; font-weight: bold; transition: 0.2s;
+      text-decoration: none; padding: 10px 16px; border-radius: 8px;
+      font-size: 0.95rem; font-weight: bold; transition: 0.3s;
     }
-    .btn-watch { background: #0077ff; color: white; }
+    .btn-watch { background: #0077ff; color: #fff; }
     .btn-watch:hover { background: #005dcc; }
-    .btn-play { background: #28a745; color: white; }
+    .btn-play { background: #28a745; color: #fff; }
     .btn-play:hover { background: #1e7e34; }
 
-    footer { text-align: center; background: #222; color: #fff; padding: 1rem; margin-top: 2rem; }
+    /* Mobzway Projects */
+    .project-cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+    }
+    .project-card {
+      background: #fff;
+      border: 2px solid #00ff99;
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      text-align: center;
+      padding: 1rem;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .project-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 6px 18px rgba(0,255,153,0.4);
+    }
+    .project-card img {
+      width: 100%; height: 180px; object-fit: contain;
+      border-bottom: 2px solid #00ff99; border-radius: 10px;
+      margin-bottom: 10px;
+    }
+    .project-card h3 { margin: 10px 0; }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      background: #1c2833;
+      color: #fff;
+      padding: 1.5rem;
+      border-top: 3px solid #00ff99;
+      margin-top: 2rem;
+    }
+
+    /* Responsive */
+    @media(max-width: 900px) {
+      .projects-grid { grid-template-columns: 1fr; }
+      .project-cards { grid-template-columns: 1fr; }
+    }
   </style>
 </head>
 <body>
 
+  <!-- Header -->
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#personal-projects">Personal Projects</a></li>
+        <li><a href="#mobzway-projects">Mobzway Projects</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
   <!-- Hero -->
-  <header class="hero" data-aos="fade-down">
+  <section id="home" class="hero" data-aos="fade-down">
     <div class="hero-content">
       <img src="https://i.pravatar.cc/200" alt="Kamal Saini" class="profile-pic" data-aos="zoom-in">
       <h1 data-aos="fade-up">Kamal Saini</h1>
       <p data-aos="fade-up" data-aos-delay="200">Unity Game Developer | C++ Programmer</p>
     </div>
-  </header>
+  </section>
 
-  <!-- Projects -->
-  <section>
-    <h2 data-aos="fade-right">Projects</h2>
-
+  <!-- Personal Projects -->
+  <section id="personal-projects">
+    <h2 data-aos="fade-right">Personal Projects</h2>
     <div class="projects-grid">
 
       <div class="project" data-aos="fade-up">
@@ -97,85 +176,73 @@
         <h3>🎲 Ludo Game</h3>
         <p>Multiplayer board game with dice mechanics & turn-based system.</p>
         <div class="buttons">
-          <a href="ludo.html" class="btn btn-watch">🎥 Watch Clip</a>
-          <a href="https://itch.io/" target="_blank" class="btn btn-play">▶ Play on Itch.io</a>
-        </div>
-      </div>
-
-      <div class="project" data-aos="fade-up" data-aos-delay="100">
-        <img src="https://picsum.photos/800/400?random=2" alt="2D Platformer">
-        <h3>🟩 2D Platformer</h3>
-        <p>Side-scrolling adventure with enemies & collectibles.</p>
-        <div class="buttons">
-          <a href="platformer2d.html" class="btn btn-watch">🎥 Watch Clip</a>
-          <a href="https://itch.io/" target="_blank" class="btn btn-play">▶ Play on Itch.io</a>
+          <a href="#" class="btn btn-watch">🎥 Watch Clip</a>
+          <a href="#" class="btn btn-play">▶ Play</a>
         </div>
       </div>
 
       <div class="project" data-aos="fade-up">
-        <img src="https://picsum.photos/800/400?random=3" alt="3D Rolling Ball">
-        <h3>⚪ 3D Rolling Ball</h3>
-        <p>Physics-based ball control game with obstacles & checkpoints.</p>
-        <div class="buttons">
-          <a href="rollingball.html" class="btn btn-watch">🎥 Watch Clip</a>
-          <a href="https://itch.io/" target="_blank" class="btn btn-play">▶ Play on Itch.io</a>
-        </div>
-      </div>
-
-      <div class="project" data-aos="fade-up" data-aos-delay="100">
-        <img src="https://picsum.photos/800/400?random=4" alt="Turn-based C++">
-        <h3>♟ Turn-based Game (C++)</h3>
-        <p>Console-based turn-based game built with C++ OOP.</p>
-        <div class="buttons">
-          <a href="turnbased.html" class="btn btn-watch">🎥 Watch Clip</a>
-          <a href="https://itch.io/" target="_blank" class="btn btn-play">▶ Play on Itch.io</a>
-        </div>
-      </div>
-
-      <div class="project" data-aos="fade-up">
-        <img src="https://picsum.photos/800/400?random=5" alt="2D Snake">
-        <h3>🐍 2D Snake</h3>
-        <p>Classic snake game with food spawning & score system.</p>
-        <div class="buttons">
-          <a href="snake2d.html" class="btn btn-watch">🎥 Watch Clip</a>
-          <a href="https://itch.io/" target="_blank" class="btn btn-play">▶ Play on Itch.io</a>
-        </div>
-      </div>
-
-      <div class="project" data-aos="fade-up" data-aos-delay="100">
-        <img src="https://picsum.photos/800/400?random=6" alt="3D Snake">
-        <h3>🐉 3D Snake</h3>
-        <p>Snake in 3D environment with tail growth & obstacles.</p>
-        <div class="buttons">
-          <a href="snake3d.html" class="btn btn-watch">🎥 Watch Clip</a>
-          <a href="https://itch.io/" target="_blank" class="btn btn-play">▶ Play on Itch.io</a>
-        </div>
-      </div>
-
-      <div class="project" data-aos="fade-up">
-        <img src="https://picsum.photos/800/400?random=7" alt="Runner">
-        <h3>🏃 Hyper Casual Runner</h3>
+        <img src="https://picsum.photos/800/400?random=2" alt="Runner">
+        <h3>🏃 Runner</h3>
         <p>Endless runner with procedural levels & fast-paced gameplay.</p>
         <div class="buttons">
-          <a href="runner.html" class="btn btn-watch">🎥 Watch Clip</a>
-          <a href="https://itch.io/" target="_blank" class="btn btn-play">▶ Play on Itch.io</a>
+          <a href="#" class="btn btn-watch">🎥 Watch Clip</a>
+          <a href="#" class="btn btn-play">▶ Play</a>
         </div>
       </div>
+
+      <!-- Add more personal projects here -->
 
     </div>
   </section>
 
+  <!-- Mobzway Projects -->
+  <section id="mobzway-projects">
+    <h2 data-aos="fade-right">Projects with Mobzway Technologies</h2>
+    <div class="project-cards">
+
+      <div class="project-card" onclick="window.open('https://topteenpatti.net/', '_blank')" style="cursor: pointer;">
+        <img src="assets/imgs/ttp.png" alt="TopTeenPatti">
+        <h3>Top Teen Patti</h3>
+        <p>Top Teen Patti - Casino Game</p>
+      </div>
+
+      <div class="project-card" onclick="window.open('https://www.happyace.in/', '_blank')" style="cursor: pointer;">
+        <img src="assets/imgs/hac.png" alt="HappyAceCasino">
+        <h3>Happy Ace Casino</h3>
+        <p>Happy Ace Casino - Casino Game</p>
+      </div>
+
+      <div class="project-card" onclick="window.open('https://www.mahaveera.live/', '_blank')" style="cursor: pointer;">
+        <img src="assets/imgs/mahaveeraResized.png" alt="Mahaveera">
+        <h3>Mahaveera</h3>
+        <p>Mahaveera - Casino Game</p>
+      </div>
+
+      <!-- Add more Mobzway projects if needed -->
+
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about">
+    <h2>About Me</h2>
+    <p>I’m a Unity Game Developer with experience in 2D, 3D, and casino-style games, API integration, and scalable architecture.</p>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:kamal@example.com">kamal@example.com</a></p>
+  </section>
+
+  <!-- Footer -->
   <footer data-aos="fade-up">
     <p>© 2025 Kamal Saini | Game Developer Portfolio</p>
   </footer>
 
-  <!-- AOS Script -->
+  <!-- AOS -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>
-    AOS.init({
-      duration: 1000,
-      once: true
-    });
-  </script>
+  <script>AOS.init({ duration: 1000, once: true });</script>
 </body>
 </html>
