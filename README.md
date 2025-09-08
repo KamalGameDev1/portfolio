@@ -1,70 +1,69 @@
-Kamal Saini
+**Kamal Saini**
+Unity Game Developer
+📞 +91 8445012907
+✉️ [kamal.gamedev96@gmail.com](mailto:kamal.gamedev96@gmail.com)
+📍 Jaipur, Rajasthan (Current) | Meerut, U.P. (Native)
+🔗 [LinkedIn](https://www.linkedin.com/in/kamal-saini-106169173/) | [GitHub](https://github.com/KamalGameDev1)
 
-📍 Jaipur, India | 📧 your.email@gmail.com
- | 📞 +91-XXXXXXXXXX
-💻 GitHub: github.com/yourusername | 🔗 LinkedIn: linkedin.com/in/yourusername
+---
 
-🎮 Game Developer (Unity & C++)
+### **Professional Summary**
 
-Unity Developer with 2+ years of experience in creating 2D, 3D, and hyper-casual games. Skilled in C#, Unity, C++, Game UI, API integration, and Clean Architecture. Passionate about building fun and optimized gameplay experiences.
+Unity Game Developer with 2+ years of experience in mobile and desktop game development. Contributed to 5+ successful project launches and independently delivered 2 complete games. Skilled in Unity (incl. Unity 6), C#, UI systems, prefabs, animations, and performance optimization. Passionate about creating **engaging, fun, and user-friendly gameplay experiences**, especially in casual and mobile-first games. **Ready to relocate** for the right opportunity.
 
-🕹️ Projects
+---
 
-Ludo Game (Unity, Multiplayer Board Game)
+### **Experience**
 
-Dice system, turn-based flow, movement logic.
+**Mobzway Technologies, Jaipur**
+**Unity Developer** | *April 2023 – Present*
 
-Implemented UI, player rules, and multiplayer mechanics.
+* Worked on **6+ interactive mobile and desktop games**, including *Ludo*, *Tambola*, and *Snake & Ladder*.
+* Designed and implemented engaging gameplay mechanics, prefabs, and interactive features.
+* Collaborated with designers and artists to integrate 2D/3D assets, animations, and UI elements.
+* Built smooth, responsive UIs and optimized performance for mobile devices.
+* Integrated APIs to deliver real-time features and enhance interactivity.
+* Used **Unity Addressables** for optimized asset management.
+* Followed best practices: **ScriptableObjects**, **Singletons**, **Object Pooling**.
+* Debugged, tested, and optimized builds to ensure performance and stability.
+* Actively exploring **Unity 6 features** to stay up-to-date with new tech.
 
-2D Platformer Game (Unity)
+---
 
-Side-scrolling adventure with enemies & collectibles.
+### **Education**
 
-Used physics, animations, and object pooling.
+**B.Tech – Computer Science & Engineering**
+Delhi Institute of Engineering & Technology (AKTU), Meerut | *2020*
 
-3D Rolling Ball (Unity)
+**Senior Secondary (12th)**
+D.N. Inter College, Meerut (U.P. Board) | *2015*
 
-Physics-based casual game with obstacles.
+**Secondary (10th)**
+K.K. Higher Secondary School, Meerut (U.P. Board) | *2012*
 
-Built levels with Rigidbody mechanics and checkpoints.
+---
 
-Turn-Based Game (C++, Console)
+### **Skills**
 
-Built from scratch with OOP in C++.
+**Languages & Tools:** C#, Unity (incl. Unity 6), GitHub
+**Game Development:** UI Implementation, API Integration, Desktop/Mobile Game Development, Unity Addressables, ScriptableObjects, Singleton Pattern, Object Pooling, Prefabs, Animations, Unity Physics
+**Soft Skills:** Team Collaboration, Project Ownership, Problem-Solving, Agile Workflow
 
-Game loop, turn system, and win conditions.
+---
 
-2D Snake Game (Unity)
+### **Achievements**
 
-Classic snake gameplay with food spawn & score.
+* Contributed to **5+ game launches** (currently live or under development).
+* **Independently developed and released 2 casual games** from start to finish.
+* Recognized for delivering clean, modular architecture in Unity projects.
 
-Implemented grid logic and collision handling.
+---
 
-3D Snake Game (Unity)
+### **Languages**
 
-Snake game in 3D environment with tail growth.
+* Hindi: **Native**
+* English: **Professional Proficiency**
 
-Designed movement logic and camera follow system.
+---
 
-Hyper Casual Runner (Unity)
-
-Endless runner with swipe/keyboard controls.
-
-Used procedural level generation and object pooling.
-
-🛠️ Skills
-
-Game Engines: Unity (2D/3D)
-
-Languages: C#, C++
-
-Concepts: OOP, Clean Architecture (ScriptableObjects, Singletons, Object Pooling)
-
-Tools: GitHub, Jira, Trello
-
-Special: UI Implementation, API Integration, Multiplayer basics
-
-🎓 Education
-
-B.Tech in Computer Science
-DIET, Meerut
+**Ready to Relocate** for better opportunities and exciting game development projects.
