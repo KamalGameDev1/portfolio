@@ -26,7 +26,7 @@
       margin: 0.5rem 0 0;
     }
     section {
-      max-width: 900px;
+      max-width: 1000px;
       margin: auto;
       padding: 2rem 1rem;
     }
@@ -39,9 +39,26 @@
     .project {
       background: #fff;
       padding: 1rem;
-      margin: 1rem 0;
+      margin: 1.5rem 0;
       border-radius: 8px;
       box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    .project img {
+      width: 100%;
+      max-height: 250px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 0.8rem;
+    }
+    .project-links a {
+      display: inline-block;
+      margin-right: 15px;
+      color: #0066cc;
+      font-weight: bold;
+      text-decoration: none;
+    }
+    .project-links a:hover {
+      text-decoration: underline;
     }
     .skills, .contact {
       display: flex;
@@ -80,45 +97,79 @@
     <h2>Projects</h2>
     
     <div class="project">
+      <img src="images/ludo.jpg" alt="Ludo Game Screenshot">
       <h3>🎲 Ludo Game</h3>
       <p>Multiplayer board game with dice mechanics & turn-based system.</p>
       <p><b>Skills:</b> Unity UI, API integration, Player movement logic</p>
+      <div class="project-links">
+        <a href="https://your-itchio-link.com/ludo" target="_blank">🎮 Play on Itch.io</a>
+        <a href="https://your-clip-url.com/ludo" target="_blank">▶ Watch Gameplay</a>
+      </div>
     </div>
 
     <div class="project">
+      <img src="images/2d-platformer.jpg" alt="2D Platformer Screenshot">
       <h3>🟩 2D Platformer</h3>
       <p>Side-scrolling adventure with enemies & collectibles.</p>
       <p><b>Skills:</b> Physics, Animations, Object Pooling</p>
+      <div class="project-links">
+        <a href="https://your-itchio-link.com/platformer" target="_blank">🎮 Play on Itch.io</a>
+        <a href="https://your-clip-url.com/platformer" target="_blank">▶ Watch Gameplay</a>
+      </div>
     </div>
 
     <div class="project">
+      <img src="images/3d-ball.jpg" alt="3D Rolling Ball Screenshot">
       <h3>⚪ 3D Rolling Ball</h3>
       <p>Physics-based ball control game with obstacles & checkpoints.</p>
       <p><b>Skills:</b> Rigidbody Physics, Level Design</p>
+      <div class="project-links">
+        <a href="https://your-itchio-link.com/rolling-ball" target="_blank">🎮 Play on Itch.io</a>
+        <a href="https://your-clip-url.com/rolling-ball" target="_blank">▶ Watch Gameplay</a>
+      </div>
     </div>
 
     <div class="project">
+      <img src="images/turn-based.jpg" alt="Turn-Based Game Screenshot">
       <h3>♟ Turn-Based Game (C++)</h3>
       <p>Console-based game built using C++ OOP principles.</p>
       <p><b>Skills:</b> C++ OOP, Data Structures, Game Loop</p>
+      <div class="project-links">
+        <a href="https://your-clip-url.com/turnbased" target="_blank">▶ Watch Gameplay</a>
+      </div>
     </div>
 
     <div class="project">
+      <img src="images/2d-snake.jpg" alt="2D Snake Game Screenshot">
       <h3>🐍 2D Snake Game</h3>
       <p>Classic snake game with food spawning & score system.</p>
       <p><b>Skills:</b> Grid Logic, Collision Handling</p>
+      <div class="project-links">
+        <a href="https://your-itchio-link.com/snake2d" target="_blank">🎮 Play on Itch.io</a>
+        <a href="https://your-clip-url.com/snake2d" target="_blank">▶ Watch Gameplay</a>
+      </div>
     </div>
 
     <div class="project">
+      <img src="images/3d-snake.jpg" alt="3D Snake Game Screenshot">
       <h3>🐉 3D Snake Game</h3>
       <p>Snake in 3D environment with tail growth & obstacles.</p>
       <p><b>Skills:</b> Path Following, Camera System</p>
+      <div class="project-links">
+        <a href="https://your-itchio-link.com/snake3d" target="_blank">🎮 Play on Itch.io</a>
+        <a href="https://your-clip-url.com/snake3d" target="_blank">▶ Watch Gameplay</a>
+      </div>
     </div>
 
     <div class="project">
+      <img src="images/runner.jpg" alt="Hyper Casual Runner Screenshot">
       <h3>🏃 Hyper Casual Runner</h3>
       <p>Endless runner with swipe/keyboard controls & procedural generation.</p>
       <p><b>Skills:</b> Object Pooling, Procedural Level Design</p>
+      <div class="project-links">
+        <a href="https://your-itchio-link.com/runner" target="_blank">🎮 Play on Itch.io</a>
+        <a href="https://your-clip-url.com/runner" target="_blank">▶ Watch Gameplay</a>
+      </div>
     </div>
   </section>
 
@@ -140,8 +191,8 @@
     <div class="contact">
       <p>📍 Jaipur, India</p>
       <p>📧 your.email@gmail.com</p>
-      <p>🔗 <a href="https://github.com/yourusername">GitHub</a></p>
-      <p>🔗 <a href="https://linkedin.com/in/yourusername">LinkedIn</a></p>
+      <p>🔗 <a href="https://github.com/yourusername" target="_blank">GitHub</a></p>
+      <p>🔗 <a href="https://linkedin.com/in/yourusername" target="_blank">LinkedIn</a></p>
     </div>
   </section>
 
