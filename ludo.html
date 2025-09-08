@@ -3,48 +3,77 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ludo Game - Kamal Saini</title>
+  <title>Ludo | Kamal Saini Projects</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
   <style>
-    body { font-family: Arial, sans-serif; margin: 0; background: #f9fafc; color: #333; }
-    header { background: #222; color: #fff; text-align: center; padding: 2rem; }
-    section { max-width: 900px; margin: auto; padding: 2rem; }
-    h2 { margin-top: 1rem; }
-    video, iframe { width: 100%; max-height: 480px; border-radius: 12px; }
-    .btn-back {
-      display: inline-block; margin-top: 1rem; padding: 10px 16px;
-      background: #0077ff; color: #fff; text-decoration: none;
-      border-radius: 6px; font-weight: bold;
+    body {
+      font-family: "Poppins", sans-serif;
+      background:#0e0e0e;
+      color:#fff;
+      padding:0;
+      margin:0;
     }
-    .btn-back:hover { background: #005dcc; }
+    header {
+      background:#111; padding:15px 30px;
+      display:flex; justify-content:space-between; align-items:center;
+      border-bottom:1px solid #333;
+    }
+    header .logo { color:#f39c12; font-weight:700; font-size:1.5rem; }
+    header a { color:#fff; text-decoration:none; margin-left:20px; transition:0.3s; }
+    header a:hover { color:#f39c12; }
+
+    main {
+      max-width:900px; margin:100px auto 50px auto; padding:20px;
+    }
+    h1 { font-size:2rem; color:#f39c12; margin-bottom:20px; }
+    .video-container {
+      width:100%; max-width:800px; margin:0 auto 30px auto;
+    }
+    video {
+      width:100%; border-radius:12px; box-shadow:0 8px 20px rgba(243,156,18,0.3);
+    }
+    p { font-size:1rem; line-height:1.6; margin-bottom:20px; }
+    .btn {
+      display:inline-block;
+      background:#f39c12; color:#fff; padding:10px 20px; border-radius:25px;
+      text-decoration:none; transition:all 0.3s;
+    }
+    .btn:hover { background:#d35400; transform:translateY(-3px); }
+    footer { text-align:center; padding:20px; border-top:1px solid #333; background:#111; margin-top:50px; }
+    footer a { color:#f39c12; margin:0 10px; }
   </style>
 </head>
 <body>
-
   <header>
-    <h1>🎲 Ludo Game</h1>
-    <p>Multiplayer Board Game by Kamal Saini</p>
+    <div class="logo">Kamal Saini</div>
+    <nav>
+      <a href="index.html">Back to Portfolio</a>
+      <a href="resume.html">Resume</a>
+    </nav>
   </header>
 
-  <section>
-    <h2>🎥 Gameplay Clip</h2>
-    <video controls>
-      <source src="https://sample-videos.com/video123/mp4/720/big_buck_bunny_720p_1mb.mp4" type="video/mp4">
-      Your browser does not support video.
-    </video>
+  <main>
+    <h1>Ludo</h1>
 
-    <h2>📖 Description</h2>
-    <p>A multiplayer board game with dice mechanics, token movement, and turn-based system. Includes win/lose conditions, multiplayer turns, and smooth UI animations.</p>
+    <div class="video-container">
+      <video controls poster="assets/imgs/ludo-poster.png">
+        <source src="assets/videos/ludo-preview.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
 
-    <h2>🛠 Skills Used</h2>
-    <ul>
-      <li>Unity 2D UI</li>
-      <li>Turn-based Game Logic</li>
-      <li>API Integration</li>
-      <li>Clean Architecture</li>
-    </ul>
+    <p>
+      Ludo is a classic multiplayer board game developed in Unity. Players can play against AI or friends, rolling dice to move their tokens and try to get all their pieces to the finish line first. The game features interactive UI, animations for dice roll, and sound effects for an engaging experience.
+    </p>
 
-    <a href="index.html" class="btn-back">⬅ Back to Portfolio</a>
-  </section>
+    <a href="index.html" class="btn">Back to Portfolio</a>
+  </main>
 
+  <footer>
+    <p>© 2025 Kamal Saini | Unity Game Developer</p>
+    <a href="https://github.com/KamalGameDev1"><i class="fab fa-github"></i></a>
+    <a href="https://www.linkedin.com/in/kamal-saini-106169173/"><i class="fab fa-linkedin"></i></a>
+  </footer>
 </body>
 </html>
