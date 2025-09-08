@@ -35,9 +35,15 @@
     /* Project Grid */
     .projects-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      grid-template-columns: repeat(2, 1fr); /* 2 columns */
       gap: 20px;
     }
+    @media (max-width: 768px) {
+      .projects-grid {
+        grid-template-columns: 1fr; /* stack on mobile */
+      }
+    }
+
     .project {
       background: #fff; border-radius: 12px; padding: 1rem;
       box-shadow: 0 2px 8px rgba(0,0,0,0.1);
@@ -48,7 +54,13 @@
       transform: translateY(-5px);
       box-shadow: 0 6px 15px rgba(0,0,0,0.15);
     }
-    .project img { width: 100%; height: 180px; object-fit: cover; border-radius: 8px; }
+    .project img { 
+      width: 100%; height: 180px; object-fit: cover; border-radius: 8px; 
+      transition: transform 0.4s ease;
+    }
+    .project:hover img {
+      transform: scale(1.05);
+    }
     .project h3 { margin: 0.6rem 0; }
     .buttons { margin-top: auto; display: flex; gap: 10px; }
     .btn {
