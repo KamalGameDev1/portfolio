@@ -4,7 +4,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Kamal Saini | Game Developer Portfolio</title>
-  <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
   <style>
@@ -13,40 +12,36 @@
     body { background:#0e0e0e; color:#fff; }
 
     header {
-      position: fixed;
-      top: 0; left: 0; width: 100%;
+      position: fixed; top: 0; left: 0; width: 100%;
       background: rgba(20,20,20,0.95);
       border-bottom: 1px solid #333;
       display:flex; justify-content:space-between; align-items:center;
       padding:15px 40px; z-index:1000;
     }
-
     header .logo { font-size:1.5rem; font-weight:700; color:#f39c12; }
-
     nav ul { display:flex; gap:25px; list-style:none; }
     nav ul li a {
       text-decoration:none; color:#fff; font-weight:500;
       transition: color 0.3s;
     }
     nav ul li a:hover { color:#f39c12; }
-
     .menu-toggle { display:none; font-size:1.8rem; cursor:pointer; }
 
     /* Hero */
     .hero {
       height:100vh;
-      background:url("https://picsum.photos/1600/900?blur=3") center/cover no-repeat;
+      background:url("https://img.freepik.com/free-vector/gradient-gaming-background_23-2149908953.jpg") center/cover no-repeat;
       display:flex; justify-content:center; align-items:center; text-align:center;
       padding:20px;
     }
     .hero-content img {
-      width:140px; height:140px; border-radius:50%;
-      border:3px solid #f39c12; margin-bottom:20px;
+      width:180px; height:180px; border-radius:50%;
+      border:4px solid #f39c12; margin-bottom:20px;
     }
-    .hero-content h1 { font-size:2.5rem; margin-bottom:10px; }
-    .hero-content p { font-size:1.2rem; margin-bottom:20px; }
+    .hero-content h1 { font-size:3rem; margin-bottom:10px; }
+    .hero-content p { font-size:1.4rem; margin-bottom:20px; }
     .btn {
-      background:#f39c12; color:#fff; padding:10px 20px; border:none;
+      background:#f39c12; color:#fff; padding:12px 24px; border:none;
       border-radius:25px; cursor:pointer; text-decoration:none;
       transition: all 0.3s;
     }
@@ -56,49 +51,54 @@
     section { padding:80px 40px; }
     h2 { text-align:center; font-size:2rem; margin-bottom:40px; }
 
-    /* Personal Projects */
-    #personal .projects-grid {
-      display:grid;
-      grid-template-columns:repeat(auto-fit, minmax(300px, 1fr));
-      gap:28px; /* slightly more spacing */
+    /* About */
+    #about p {
+      max-width:800px; margin:0 auto;
+      text-align:center; font-size:1.1rem;
+      line-height:1.8; color:#ccc;
     }
-    #personal .project-card {
+
+    /* Skills */
+    #skills .skill {
+      margin-bottom:20px;
+      max-width:700px; margin-left:auto; margin-right:auto;
+    }
+    #skills .skill h3 { margin-bottom:8px; font-size:1rem; }
+    .progress-bar {
+      background:#333; border-radius:20px; overflow:hidden;
+    }
+    .progress {
+      height:12px; background:#f39c12;
+      width:0; transition:width 2s ease;
+    }
+
+    /* Projects */
+    #personal .projects-grid {
+      display:grid; grid-template-columns:repeat(auto-fit, minmax(300px, 1fr));
+      gap:28px;
+    }
+    #mobzway .projects-grid {
+      display:flex; flex-wrap:wrap; justify-content:center; gap:30px;
+    }
+    .project-card {
       background:#1e1e1e; border:1px solid #333;
       border-radius:12px; overflow:hidden; cursor:pointer;
       transition: all 0.3s ease; opacity:0; transform: translateY(40px);
     }
-    #personal .project-card img { width:100%; height:200px; object-fit:cover; }
-    #personal .project-card h3 { margin:15px; color:#f39c12; }
-    #personal .project-card p { margin:0 15px 20px; font-size:0.95rem; color:#ccc; }
-    #personal .project-links { margin:0 15px 20px; }
-    #personal .project-links a {
+    .project-card img { width:100%; height:200px; object-fit:cover; }
+    .project-card h3 { margin:15px; color:#f39c12; }
+    .project-card p { margin:0 15px 20px; font-size:0.95rem; color:#ccc; }
+    .project-links { margin:0 15px 20px; }
+    .project-links a {
       margin-right:10px; padding:8px 15px; border-radius:20px;
       text-decoration:none; font-size:0.9rem; background:#333; color:#fff;
       transition:all 0.3s;
     }
-    #personal .project-links a:hover { background:#f39c12; }
-    #personal .project-card.show { opacity:1; transform:translateY(0); transition:all 0.6s ease; }
-    #personal .project-card:hover { box-shadow:0 8px 20px rgba(243,156,18,0.3); border:1px solid #f39c12; transform:translateY(-5px); }
+    .project-links a:hover { background:#f39c12; }
+    .project-card.show { opacity:1; transform:translateY(0); transition:all 0.6s ease; }
+    .project-card:hover { box-shadow:0 8px 20px rgba(243,156,18,0.3); border:1px solid #f39c12; transform:translateY(-5px); }
 
-    /* Mobzway Projects */
-    #mobzway .projects-grid {
-      display:flex;
-      flex-wrap:wrap;
-      justify-content:center;
-      gap:30px; /* slightly bigger gap */
-    }
-    #mobzway .project-card {
-      width:320px; /* slightly bigger cards */
-      background:#1e1e1e; border:1px solid #333;
-      border-radius:12px; overflow:hidden; cursor:pointer;
-      transition: transform 0.3s, box-shadow 0.3s; opacity:0; transform: translateY(40px);
-    }
-    #mobzway .project-card img { width:100%; height:200px; object-fit:cover; }
-    #mobzway .project-card h3 { margin:15px; color:#f39c12; }
-    #mobzway .project-card p { margin:0 15px 20px; font-size:0.95rem; color:#ccc; }
-    #mobzway .project-card.show { opacity:1; transform:translateY(0); transition:all 0.6s ease; }
-    #mobzway .project-card:hover { transform: translateY(-5px); box-shadow:0 12px 28px rgba(243,156,18,0.4); }
-
+    /* Footer */
     footer {
       background:#111; border-top:1px solid #333;
       text-align:center; padding:20px;
@@ -124,6 +124,8 @@
     <nav>
       <ul>
         <li><a href="#hero">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
         <li><a href="#mobzway">Mobzway Projects</a></li>
         <li><a href="#personal">Personal Projects</a></li>
         <li><a href="resume.html">Resume</a></li>
@@ -140,6 +142,43 @@
       <a href="resume.html" class="btn">Download Resume (PDF)</a>
     </div>
   </section> 
+
+  <!-- About -->
+  <section id="about">
+    <h2>About Me</h2>
+    <p>
+      Unity Game Developer with 2+ years of experience in mobile and desktop game development. 
+      Contributed to 5+ successful project launches and independently delivered 2 complete games. 
+      Skilled in Unity (including Unity 6), C#, UI systems, prefabs, animations, and performance optimization. 
+      Passionate about creating engaging, fun, and user-friendly gameplay experiences, especially in casual and mobile-first games. 
+      Ready to relocate for the right opportunity.
+    </p>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="skill">
+      <h3>Unity (incl. Unity 6)</h3>
+      <div class="progress-bar"><div class="progress" data-width="90%"></div></div>
+    </div>
+    <div class="skill">
+      <h3>C# Programming</h3>
+      <div class="progress-bar"><div class="progress" data-width="85%"></div></div>
+    </div>
+    <div class="skill">
+      <h3>UI Implementation</h3>
+      <div class="progress-bar"><div class="progress" data-width="80%"></div></div>
+    </div>
+    <div class="skill">
+      <h3>Animations & Prefabs</h3>
+      <div class="progress-bar"><div class="progress" data-width="75%"></div></div>
+    </div>
+    <div class="skill">
+      <h3>Performance Optimization</h3>
+      <div class="progress-bar"><div class="progress" data-width="70%"></div></div>
+    </div>
+  </section>
 
   <!-- Personal Projects -->
   <section id="personal">
@@ -181,46 +220,10 @@
           <a href="https://itch.io" target="_blank">Itch.io</a>
         </div>
       </div>
-      <div class="project-card">
-        <img src="https://picsum.photos/400/200?5" alt="2D Snake">
-        <h3>2D Snake</h3>
-        <p>Classic snake game recreated in Unity.</p>
-        <div class="project-links">
-          <a href="2dsnake.html">Watch to Play</a>
-          <a href="https://itch.io" target="_blank">Itch.io</a>
-        </div>
-      </div>
-      <div class="project-card">
-        <img src="https://picsum.photos/400/200?6" alt="3D Snake">
-        <h3>3D Snake</h3>
-        <p>Snake game reimagined in 3D world.</p>
-        <div class="project-links">
-          <a href="3dsnake.html">Watch to Play</a>
-          <a href="https://itch.io" target="_blank">Itch.io</a>
-        </div>
-      </div>
-      <div class="project-card">
-        <img src="https://picsum.photos/400/200?7" alt="Hyper Casual Runner">
-        <h3>Hyper Casual Runner</h3>
-        <p>Fast-paced endless running game.</p>
-        <div class="project-links">
-          <a href="runner.html">Watch to Play</a>
-          <a href="https://itch.io" target="_blank">Itch.io</a>
-        </div>
-      </div>
-      <div class="project-card">
-        <img src="https://picsum.photos/400/200?8" alt="3D Sharpshooter">
-        <h3>3D Sharpshooter</h3>
-        <p>First-person target shooting game.</p>
-        <div class="project-links">
-          <a href="sharpshooter.html">Watch to Play</a>
-          <a href="https://itch.io" target="_blank">Itch.io</a>
-        </div>
-      </div>
     </div>
   </section>
-  
- <!-- Mobzway Projects -->
+
+  <!-- Mobzway Projects -->
   <section id="mobzway">
     <h2>Projects with Mobzway Technologies</h2>
     <div class="projects-grid">
@@ -249,10 +252,12 @@
   </footer>
 
   <script>
+    // Toggle menu
     const toggle = document.querySelector(".menu-toggle");
     const navLinks = document.querySelector("nav ul");
     toggle.addEventListener("click", () => { navLinks.classList.toggle("show"); });
 
+    // Animate project cards
     const cards = document.querySelectorAll(".project-card");
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
@@ -262,6 +267,17 @@
       });
     }, { threshold:0.2 });
     cards.forEach(card => observer.observe(card));
+
+    // Animate skills
+    const progresses = document.querySelectorAll(".progress");
+    const skillObserver = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if(entry.isIntersecting){
+          entry.target.style.width = entry.target.dataset.width;
+        }
+      });
+    }, { threshold:0.5 });
+    progresses.forEach(p => skillObserver.observe(p));
   </script>
 </body>
 </html>
