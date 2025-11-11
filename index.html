@@ -9,7 +9,7 @@
   <style>
     * { margin:0; padding:0; box-sizing:border-box; font-family:"Poppins", sans-serif; }
 
-    body { background:#0e0e0e; color:#fff; }
+    body { background:#0e0e0e; color:#fff; scroll-behavior:smooth; }
 
     header {
       position: fixed; top: 0; left: 0; width: 100%;
@@ -36,7 +36,7 @@
     }
     .hero-content img {
       width:180px; height:180px; border-radius:50%;
-      border:4px solid #f39c12; margin-bottom:20px;
+      border:4px solid #f39c12; margin-bottom:20px; object-fit:cover;
     }
     .hero-content h1 { font-size:3rem; margin-bottom:10px; }
     .hero-content p { font-size:1.4rem; margin-bottom:20px; }
@@ -72,31 +72,73 @@
       width:0; transition:width 2s ease;
     }
 
-    /* Projects */
-    #personal .projects-grid {
-      display:grid; grid-template-columns:repeat(auto-fit, minmax(300px, 1fr));
-      gap:28px;
-    }
+    /* ===== Fixed Project Grids (Responsive + Non-Stretched Images) ===== */
+    #personal .projects-grid,
     #mobzway .projects-grid {
-      display:flex; flex-wrap:wrap; justify-content:center; gap:30px;
+      display:grid;
+      grid-template-columns:repeat(auto-fill, minmax(280px, 1fr));
+      gap:28px;
+      justify-content:center;
+      align-items:start;
+      max-width:1200px;
+      margin:0 auto;
+      padding:0 10px;
     }
+
     .project-card {
       background:#1e1e1e; border:1px solid #333;
       border-radius:12px; overflow:hidden; cursor:pointer;
       transition: all 0.3s ease; opacity:0; transform: translateY(40px);
+      align-self:start;
     }
-    .project-card img { width:100%; height:200px; object-fit:cover; }
-    .project-card h3 { margin:15px; color:#f39c12; }
-    .project-card p { margin:0 15px 20px; font-size:0.95rem; color:#ccc; }
-    .project-links { margin:0 15px 20px; }
+
+    /* Prevent image stretching */
+    .project-card img {
+      width:100%;
+      height:auto;
+      aspect-ratio:16/9;
+      object-fit:contain; /* prevents stretching */
+      background:#111; /* gives contrast if transparent icon */
+      border-bottom:1px solid #333;
+      padding:10px;
+    }
+
+    .project-card h3 { margin:15px; color:#f39c12; text-align:center; }
+    .project-card p { margin:0 15px 20px; font-size:0.95rem; color:#ccc; text-align:center; }
+    .project-links { margin:0 15px 20px; text-align:center; }
     .project-links a {
-      margin-right:10px; padding:8px 15px; border-radius:20px;
+      margin:0 5px; padding:8px 15px; border-radius:20px;
       text-decoration:none; font-size:0.9rem; background:#333; color:#fff;
       transition:all 0.3s;
     }
     .project-links a:hover { background:#f39c12; }
     .project-card.show { opacity:1; transform:translateY(0); transition:all 0.6s ease; }
     .project-card:hover { box-shadow:0 8px 20px rgba(243,156,18,0.3); border:1px solid #f39c12; transform:translateY(-5px); }
+
+    /* Responsive Layouts */
+    @media (min-width: 1025px) {
+      #personal .projects-grid,
+      #mobzway .projects-grid {
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      }
+    }
+
+    @media (max-width: 1024px) and (min-width: 601px) {
+      #personal .projects-grid,
+      #mobzway .projects-grid {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      }
+    }
+
+    @media (max-width: 600px) {
+      #personal .projects-grid,
+      #mobzway .projects-grid {
+        grid-template-columns: 1fr;
+        gap:20px;
+      }
+      .project-card img { aspect-ratio: 4/3; }
+      .project-card h3 { font-size:1rem; }
+    }
 
     /* Footer */
     footer {
@@ -105,7 +147,7 @@
     }
     footer a { color:#f39c12; margin:0 10px; font-size:1.3rem; }
 
-    /* Mobile */
+    /* Mobile Navigation */
     @media(max-width:768px) {
       nav ul {
         display:none; flex-direction:column; position:absolute;
@@ -166,11 +208,11 @@
     </div>
     <div class="skill">
       <h3>UI Implementation</h3>
-      <div class="progress-bar"><div class="progress" data-width="80%"></div></div>
+      <div class="progress-bar"><div class="progress" data-width="95%"></div></div>
     </div>
     <div class="skill">
-      <h3>Animations & Prefabs</h3>
-      <div class="progress-bar"><div class="progress" data-width="75%"></div></div>
+      <h3>Animations</h3>
+      <div class="progress-bar"><div class="progress" data-width="80%"></div></div>
     </div>
     <div class="skill">
       <h3>Performance Optimization</h3>
@@ -182,90 +224,39 @@
   <section id="personal">
     <h2>Personal Projects</h2>
     <div class="projects-grid">
-      <!--
-      <div class="project-card">
-        <img src="assets/imgs/ludo.png" alt="Ludo">
-        <h3>Ludo</h3>
-        <p>Classic multiplayer board game in Unity.</p>
-        <div class="project-links">
-          <a href="ludo.html">Watch to Play</a>
-          <a href="https://itch.io" target="_blank">Itch.io</a>
-        </div>
-      </div>
-      <div class="project-card">
-        <img src="assets/imgs/2dplatformer.png" alt="2D Platformer">
-        <h3>2D Platformer</h3>
-        <p>Fun side-scrolling adventure game.</p>
-        <div class="project-links">
-          <a href="2dplatformer.html">Watch to Play</a>
-          <a href="https://itch.io" target="_blank">Itch.io</a>
-        </div>
-      </div>-->
       <div class="project-card">
         <img src="assets/imgs/3drollingball.png" alt="3D Rolling Ball">
         <h3>3D Rolling Ball</h3>
         <p>Physics-based rolling ball obstacle game.</p>
         <div class="project-links">
-          <a href="3drollingball.html">Watch to Play</a><!--
-          <a href="https://itch.io" target="_blank">Itch.io</a>-->
+          <a href="3drollingball.html">Watch to Play</a>
         </div>
       </div>
-      <!-- Project gap-->
+
       <div class="project-card">
         <img src="assets/imgs/turnbased.png" alt="Turn Based Game">
         <h3>Turn Based Game (C++)</h3>
         <p>Strategy game implemented in C++.</p>
         <div class="project-links">
-          <!--<a href="turnbased.html">Watch to Play</a>-->
           <a href="https://replit.com/@KamalKumar1/Pokemon-console-based-battle-adventure-game" target="_blank">Replit</a>
         </div>
       </div>
-      <!-- Project gap-->
+
       <div class="project-card">
         <img src="assets/imgs/2dsnake.png" alt="2D Snake">
         <h3>2D Snake</h3>
         <p>Classic snake game recreated in Unity.</p>
         <div class="project-links">
           <a href="2dsnake.html">Watch to Play</a>
-          <!--<a href="https://itch.io" target="_blank">Itch.io</a>-->
-        </div>
-      </div><!--
-      <div class="project-card">
-        <img src="assets/imgs/3dsnake.png" alt="3D Snake">
-        <h3>3D Snake</h3>
-        <p>Snake game reimagined in 3D world.</p>
-        <div class="project-links">
-          <a href="3dsnake.html">Watch to Play</a>
-          <a href="https://itch.io" target="_blank">Itch.io</a>
         </div>
       </div>
-      <div class="project-card">
-        <img src="assets/imgs/runner.png" alt="Hyper Casual Runner">
-        <h3>Hyper Casual Runner</h3>
-        <p>Fast-paced endless running game.</p>
-        <div class="project-links">
-          <a href="runner.html">Watch to Play</a>
-          <a href="https://itch.io" target="_blank">Itch.io</a>
-        </div>
-      </div>
-      <div class="project-card">
-        <img src="assets/imgs/sharpshooter.png" alt="3D Sharpshooter">
-        <h3>3D Sharpshooter</h3>
-        <p>First-person target shooting game.</p>
-        <div class="project-links">
-          <a href="sharpshooter.html">Watch to Play</a>
-          <a href="https://itch.io" target="_blank">Itch.io</a>
-        </div>
-      </div>-->
-      </div>
-      <!-- Project gap-->
+
       <div class="project-card">
         <img src="assets/imgs/2dsnake.png" alt="SimplyPairs">
         <h3>SimplyPairs</h3>
         <p>Card matching Game.</p>
         <div class="project-links">
-          <a href="2dsnake.html">Watch to Play</a><!--
-          <a href="https://itch.io" target="_blank">Itch.io</a>-->
+          <a href="2dsnake.html">Watch to Play</a>
         </div>
       </div>
     </div>
